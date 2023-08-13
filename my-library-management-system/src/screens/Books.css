@@ -1,0 +1,105 @@
+/* Books.css */
+.book-table-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .book-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-table th,
+  .book-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd; /* Increased border thickness */
+  }
+  
+  .book-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+    padding: 16px 12px;
+    position: relative;
+    border-right: 2px solid #ddd; /* Separation between headers */
+  }
+  
+  .book-table th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px; /* Increased height for better visibility */
+    background-color: #1976D2;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .book-table th:hover::after {
+    opacity: 1;
+  }
+  
+  .book-table th:last-child {
+    border-right: none; /* No separation for the last header */
+  }
+  
+  .book-item {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd; /* Increased border thickness */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-item:not(:last-child) {
+    border-bottom: none;
+  }
+  
+  .book-item:hover {
+    background-color: #f2f2f2;
+  }
+  
+  div h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #1976D2;
+  }
+
+  .books-container{
+    margin-top: 100px;
+  }
+.books-container h2{
+    color: white;
+    text-align: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-bottom: 20px;
+}
+.add-books{
+    
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 2vw;
+}
+.add-books button{
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.book-details {
+    display: flex;
+    gap: 1.5rem;
+}
